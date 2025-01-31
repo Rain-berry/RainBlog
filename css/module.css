@@ -1,0 +1,123 @@
+.wrapper{
+	position: absolute;
+	top: 0;
+	left: 0; 
+	overflow: hidden;
+}
+#body-size{
+	display: block; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	opacity: 0; 
+    z-index: -1000; 
+	pointer-events: none;
+}
+/* TopNavigation - S
+顶部导航栏 - pageheader/top-nav */
+.page-header,.top-nav,.top-menu{
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.page-header{
+	position: relative;
+	top: .75vh;
+}
+
+.top-nav{
+	width: calc(20rem - 1vmax);
+}
+
+.top-nav>a:hover{
+	box-shadow: 2px 3px 4px 6px var(--color-white);
+	transition: .8s .3s;
+}
+
+.top-nav>a>img,.top-nav>a{
+	display: inline-block;
+	border-radius: 100%;
+	width: 14vmax;
+	max-width: calc(4.8rem - .5vw);
+	vertical-align: middle;
+	transition: .5s;
+}
+
+.logo>a{
+	-webkit-user-select: none;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.logo>a>h1{
+	display: block;
+	font-family: Chillax-Medium, var(--font-family-regular);
+	font-size: var(--logo-fs-h1);
+}
+
+.logo>a>h2{
+	display: block;
+	font-family: HuayingMincho, var(--font-family-regular);
+	font-size: var(--logo-fs-h2);
+	color: var(--color-grey-medium);
+}
+#top-menu>*>*{
+	-webkit-user-select: none;
+	display: contents;
+	padding: .6rem .6rem .6rem .6rem;
+	color: var(--color-grey-dark);
+	transition: .5s;
+	font-family: Chillax-Medium, var(--font-family-regular);
+	font-size: var(--menu-fs-a);
+}
+#top-menu>*>*:hover{
+	color: var(--color-grey-medium);
+	transition: .5s;
+}
+ul.top-menu{
+	/* min-width/width 属性在main-menu.js设置 */
+	justify-content: space-around;
+}
+/* TopNavigation - E*/
+
+/* Content - S
+主体内容 */
+.content{
+	display: flex;
+	position: relative;
+	margin: .5rem 0 .5rem 0;
+	width: 100%;
+	flex-flow: row nowrap;
+}
+.intro{
+	padding-top: var(--intro-padding);
+	font-family: GeneralSans-Semibold, HuayingMincho, var(--font-family-regular);
+}
+.intro>*{
+	word-break: keep-all;
+	margin-bottom: .5rem;
+}
+.intro>h1{
+	font-size: var(--intro-fs-h1);
+}
+.intro>h2{
+	font-size: var(--intro-fs-h2);
+	color: var(--color-orange-light);
+	margin-bottom: 2rem;
+}
+.intro>p{
+	margin:.2rem 0 0 0;
+	text-align: left;
+	font-size: var(--intro-fs-p);
+	font-weight: 600;
+	font-family: mazzardsoftm-light, HuayingMincho, var(--font-family-regular);
+	color: var(--color-grey-dark);
+}
+.intro>p.crucial{
+	color: var(--color-orange-light-hs);
+}
+/* Content -E*/

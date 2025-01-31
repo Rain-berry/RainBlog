@@ -1,0 +1,19 @@
+/**
+* @license
+*
+* Font Family: HuayingMincho
+* URL: https://github.com/adobe-fonts/source-han-serif
+* SourceHanSansCN
+* 
+*/
+
+@font-face {
+	font-family:SourceHanSansCN-Regular;
+	src: url('./SourceHanSansCN-Regular.otf') format('otf');
+	font-display: swap;
+}
+@font-face {
+	font-family:SourceHanSansCN-Medium;
+	src: url('./SourceHanSansCN-Medium.otf') format('otf');
+	font-display: swap;
+}

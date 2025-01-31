@@ -1,0 +1,16 @@
+/**
+* @license
+*
+* Font Family: HuayingMincho
+* Designed by: GuiWonder
+* URL: https://github.com/GuiWonder/HuayingMincho/
+*
+* HuayingMinchoClassic
+*
+*/
+
+@font-face {
+	font-family:HuayingMincho;
+	src: url('./HuayingMinchoClassic.ttf') format('truetype');
+	font-display: swap;
+}

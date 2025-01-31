@@ -1,0 +1,163 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+:root{
+	--font-family-regular: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "Segoe UI", "Roboto",
+	"Helvetica Neue", Arial,sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--color-yellow-ls: #c2ad67;
+	--color-grey-dark: #67646c;
+	--color-grey-medium: #828281;
+	--color-grey-light: #efece8;
+	--color-black: #28292c;
+	--color-green-light: #d6e2a0;
+	--color-green-dark: #70825f;
+	--color-orange-light: #f0cfab;
+	--color-orange-light-hs: #ebc48c;
+	--color-white: #fff4ea;
+	--logo-fs-h1: calc(3rem - .8vmax);
+	--logo-fs-h2: calc(2rem - .9vmax);
+	--menu-fs-a: calc(1rem + .1vmax);
+	--intro-fs-h1: calc(2rem + 1.5vmax);
+	--intro-fs-h2: calc(2rem + .9vmax);
+	--intro-fs-p: calc(.5rem + .4vmax);
+	--intro-padding: 5rem;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+}
+body{
+	width: 100%;
+	height: 100%;
+
+}
+img{
+	transition: .3s;
+}
+
+img:hover{
+	box-shadow: inset 0 0 4px 2px rgba(0,0,0,.6),
+	1px 2px 6px 3px var(--color-grey-dark);
+	transition: .3s;
+}
+
+#root{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-grey-light);
+}
+div.wrapper{
+	opacity: 0;
+}
+a{
+	text-decoration: none;
+}
+
+p>a{
+	color: var(--color-orange-light);
+}
+
+p>a:hover{
+	text-decoration: underline;
+}
+
+a,
+body,
+blockquote,
+dl,
+dd,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+img,
+p,
+pre,
+ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	color: var(--color-grey-dark);
+	line-height: 95%;
+	font-weight: 800;
+	float: none;
+}
+ul{
+	list-style: none;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 500px) {
+	html{
+		font-size: calc(10px + .7vmax);
+	}
+	.wrapper{
+		padding: 2vw 5vw 3vw 5vw;
+	}
+	:root{
+		--intro-fs-h1: calc(2rem + 2.4vmax);
+		--intro-fs-h2: calc(2rem + 1.4vmax);
+		--intro-fs-p: calc(.5rem + .8vmax);
+		--intro-padding: calc(5.5rem + 8vh);
+	}
+}
+@media screen and (min-width: 500px) {
+	html{
+		font-size: calc(10px + .3vmax);
+	}
+	.wrapper{
+		padding: 3vw 6vw 3vw 6vw;
+	}
+	:root{
+		--intro-padding: calc(5.5rem + 2vh);
+	}
+}
+@media screen and (min-width: 730px) {
+	html{
+		font-size: calc(14px + .3vmax);
+	}
+	.wrapper{
+		padding: 3vw 7vw 5vw 7vw;
+	}
+	:root{
+		--intro-padding: calc(5.5rem + 3vh);
+	}
+}
+@media screen and (min-width: 1180px) {
+	html{
+		font-size: calc(15px + .4vmax);
+	}
+	.wrapper{
+		padding: 3vw 6vw 5vw 6vw;
+	}
+}
+
+@media screen and (min-width: 2048px) {
+	html{
+		font-size: calc(20px + .5vmax);
+	}
+}
+@media screen and (min-height: 1024px) and (max-width: 1400px){
+	html{
+		font-size: calc(18px + .4vmax);
+	}
+	.wrapper{
+		padding: 3vw 6vw 5vw 6vw;
+	}
+}
