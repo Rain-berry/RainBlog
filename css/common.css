@@ -1,0 +1,9 @@
+.comm-btn{
+	-webkit-user-select: none;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	font-family: SourceHanSansCN-Medium, var(--font-family-regular);
+	font-weight:bold;
+	font-size: var(--comm-btn);
+}

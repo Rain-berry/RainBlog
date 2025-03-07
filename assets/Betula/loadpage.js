@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 				animeMask.appendChild(textLoading);
 				btlTextAnimation01('btl-load-canvas' , 'btl-loadpage-text' , 1.2);
 				let loadObserveText = setInterval(() =>{
+					/*等待load.js加载流处理完毕之后执行*/
 					if (btlPageOnloading === 'true' && btlLoadPageSvg === 'loaded'){
 						clearInterval(loadObserveText);
 						loadedAnimation();
@@ -195,8 +196,10 @@ document.addEventListener('DOMContentLoaded', () =>{
 									resolve()
 								}, 500)
 							})
-							textLoading.innerText = 'Welcom!';
+							/* 自定义加载完毕文本与文本样式 S*/
+							textLoading.innerText = 'Welcome!';
 							textLoading.setAttribute('style', `font-size: ${(textHeight + textWidth) * 1.5}px; font-weight: bold; color: ${afterColor}; font-family: Chillax-Medium;`);
+							/* E */
 							await new Promise(resolve =>{
 								replaceClass(textLoading, 'btl-opacity-enter', 'btl-opacity-leave');
 								setTimeout(() =>{

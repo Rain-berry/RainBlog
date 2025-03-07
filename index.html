@@ -11,7 +11,7 @@
 		<meta name="x5-page-mode" content="app"/>
 		<title>主页 - Rainberry's Blog 「惟我愿雪」</title>
 		
-		<!--preload&prefetch-->
+		<!--preload&prefetch 第一页面传达所需文件-->
 		<link rel="preload" as="style" href="./css/style.css"/>
 		<link rel="preload" as="script" href="./js/common.js">
 		<link rel="preload" as="style" href="./assets/Betula/betula.css"/>
@@ -23,6 +23,7 @@
 		<link rel="stylesheet" href="./css/main.css"/>
 		<link rel="stylesheet" href="./css/module.css"/>
 		<link rel="stylesheet" href="./assets/Betula/betula.css"/>
+		<link rel="stylesheet" href="./css/common.css">
 		<!--End CSS-->
 		
 		<!--fonts-->
@@ -67,9 +68,20 @@
 					<h1>白茶 咖啡豆 </h1>
 					<h2>蒸汽与灯丝 落地窗外的雨雾</h2>
 					<p>Hello!  这里是雨酱 Rainberry的个人博客/&通常会发布一些技术类文章 / 同人小说 ~</p>
-					<p class="crucial">“风景日夕佳，与君赋新诗。” 旅人既已落榻，那便不妨随我同赏这俗画</p>
+					<p class="intro-crucial">“风景日夕佳，与君赋新诗。” 旅人既已落榻，不妨随我同赏这俗画 ?</p>
+				</div>
+				<div id="home-btn">
+					<li><a class="comm-btn" id="btn-about" href="./about/index.html">ABOUT</a></li>
+					<li><a class="comm-btn" id="btn-article" href="./articles/index.html">ARTICLE</a></li>
 				</div>
 			</main>
+			<div class="page-bottom">
+				<div class="page-palette">
+					<!--调色样式需在js中设置-->
+					<div id="palette-orange"></div>
+					<div id="palette-rainberry"></div>
+				</div>
+			</div>
 		</div>
 		<object id="body-size"></object>
 		

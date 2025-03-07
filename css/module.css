@@ -33,11 +33,6 @@
 	width: calc(20rem - 1vmax);
 }
 
-.top-nav>a:hover{
-	box-shadow: 2px 3px 4px 6px var(--color-white);
-	transition: .8s .3s;
-}
-
 .top-nav>a>img,.top-nav>a{
 	display: inline-block;
 	border-radius: 100%;
@@ -63,19 +58,16 @@
 	display: block;
 	font-family: HuayingMincho, var(--font-family-regular);
 	font-size: var(--logo-fs-h2);
-	color: var(--color-grey-medium);
 }
 #top-menu>*>*{
 	-webkit-user-select: none;
 	display: contents;
 	padding: .6rem .6rem .6rem .6rem;
-	color: var(--color-grey-dark);
 	transition: .5s;
 	font-family: Chillax-Medium, var(--font-family-regular);
 	font-size: var(--menu-fs-a);
 }
 #top-menu>*>*:hover{
-	color: var(--color-grey-medium);
 	transition: .5s;
 }
 ul.top-menu{
@@ -91,7 +83,10 @@ ul.top-menu{
 	position: relative;
 	margin: .5rem 0 .5rem 0;
 	width: 100%;
-	flex-flow: row nowrap;
+	flex-flow: column nowrap;
+}
+.content>*{
+	margin: var(--content-mg);
 }
 .intro{
 	padding-top: var(--intro-padding);
@@ -106,7 +101,6 @@ ul.top-menu{
 }
 .intro>h2{
 	font-size: var(--intro-fs-h2);
-	color: var(--color-orange-light);
 	margin-bottom: 2rem;
 }
 .intro>p{
@@ -115,9 +109,81 @@ ul.top-menu{
 	font-size: var(--intro-fs-p);
 	font-weight: 600;
 	font-family: mazzardsoftm-light, HuayingMincho, var(--font-family-regular);
-	color: var(--color-grey-dark);
 }
-.intro>p.crucial{
-	color: var(--color-orange-light-hs);
-}
+
 /* Content -E*/
+
+/* HomeButton - S
+主体导航按钮 */
+#home-btn{
+	display: flex;
+	width: 30%;
+	justify-content: flex-start;
+}
+#home-btn>*{
+	margin: .5rem 1.5rem .5rem 0;
+	list-style: none;
+}
+#home-btn>*>*{
+	background-clip: text;
+	color: transparent;
+	background-color: transparent;
+	font-family: SourceHanSansCN-Medium, var(--font-family-regular);
+	letter-spacing: .07rem;
+	word-break: keep-all;
+}
+
+#btn-about:after, #btn-article:after{
+	position: absolute;
+	left: 0;
+	z-index: 2;
+	opacity: .8;
+	font-size: 70%;
+	-webkit-text-stroke: initial;
+	text-stroke: initial;
+}
+#btn-about:after{
+	content: "关于本站";
+}
+
+/* 底部导航栏 BottomNavigation S */
+.page-bottom{
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	height: 10%;
+}
+
+.page-palette{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: visible;
+	margin-left: auto;
+	min-width: 10%;
+	height: 100%;
+}
+.page-palette>div{
+	margin: 10% 0 10% 12%;
+	cursor: pointer;
+	user-select: none;
+	width: .6rem;
+	height: .6rem;
+	background-color: blue;
+	border-radius: 50%;
+	transition: .3s;
+}
+.page-palette>#palette-orange:hover, .page-palette>#palette-rainberry:hover{
+	opacity: .8;
+	transition: .3s;
+}
+.page-palette>#palette-orange:after, .page-palette>#palette-rainberry:after{
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	padding: 5px 7px 5px 9px;
+}

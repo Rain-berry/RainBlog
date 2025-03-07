@@ -29,8 +29,8 @@ const getLocalStore = (key) =>{
 }
 
 let firstLoad = getLocalStore("first_load");
-if (firstLoad === 'false'){
-	btlPageOnloading = 'true';
+if (firstLoad === 'true'){ /*开发时若不需要重载加载页面则将判断条件改为!falese*/
+	btlPageOnloading = 'true'; 
 }
 
 /* 监听加载流 */
@@ -48,7 +48,7 @@ const monitorLoad = () =>{
 /* 资源(迭代资源)首次载入前的加载 */
 document.addEventListener('DOMContentLoaded', () =>{
 	globalThis.loadState = document.getElementById('load-state');
-	if (firstLoad !== 'false'){
+	if (firstLoad !== 'true'){ /*开发时若不需要重载加载页面则将判断条件改为!falese*/
 		console.log(firstLoad);
 		/* 检查资源是否加载 */
 		const loadImage = () =>{
