@@ -149,7 +149,7 @@ function btlLoadCanvas(){
 
 document.addEventListener('DOMContentLoaded', () =>{
 	//动态控制svg
-	if (btlPageOnloading === 'false'){
+	if (btlPageOnloading === 'true'){
 		btlLoadPage();
 	}
 	async function btlLoadPage(){

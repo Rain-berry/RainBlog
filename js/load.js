@@ -28,8 +28,10 @@ const getLocalStore = (key) =>{
 	}
 }
 
-let firstLoad = getLocalStore("first_load");
-if (firstLoad === 'true'){ /*开发时若不需要重载加载页面则将判断条件改为!falese*/
+//let firstLoad = getLocalStore("first_load");
+let firstLoad = "falese";
+console.log(firstLoad);
+if (firstLoad === 'falese'){ /*开发时若不需要重载加载页面则将判断条件改为!false*/
 	btlPageOnloading = 'true'; 
 }
 
@@ -48,7 +50,7 @@ const monitorLoad = () =>{
 /* 资源(迭代资源)首次载入前的加载 */
 document.addEventListener('DOMContentLoaded', () =>{
 	globalThis.loadState = document.getElementById('load-state');
-	if (firstLoad !== 'true'){ /*开发时若不需要重载加载页面则将判断条件改为!falese*/
+	if (firstLoad !== 'true'){ /*开发时若不需要重载加载页面则将判断条件改为!false*/
 		console.log(firstLoad);
 		/* 检查资源是否加载 */
 		const loadImage = () =>{
@@ -79,7 +81,9 @@ document.addEventListener('DOMContentLoaded', () =>{
 				await loadImage();
 				await loadFonts();
 				btlPageOnloading = 'true';
+				let firstLoad = 'true'
 				setLocalStore("first_load", "true", setTime(60, 0));
+				pagePaletteInit();
 			}
 		}
 	}else {
